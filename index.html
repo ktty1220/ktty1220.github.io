@@ -1,74 +1,790 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Ktty1220.github.io : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Ktty1220.github.io</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="description" content="ktty1220のポートフォリオ">
+    <meta name="keywords" content="ktty1220">
+    <title>ktty1220@Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/clearfix.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
-
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ktty1220">View on GitHub</a>
-
-          <h1 id="project_title">Ktty1220.github.io</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
+    <div id="wrap">
+      <div id="content" class="content">
+        <div class="row-fluid">
+          <div class="span4">
+            <div class="box">
+              <h1>
+                <img src="https://si0.twimg.com/profile_images/1545506811/under_construction_normal.png" alt="avatar">
+                <span>ktty1220</span>
+              </h1>
+              <h2>About Me</h2>
+              <p>
+                個人でWebサービスをいくつか運営しています。Webサービスの運営で飯を食べていけるよう修行中です。（達成度<span class="percent">0.5%</span>）</p>
+              <h2>Services</h2>
+              <ul id="services">
+                <li>
+                  <a href="https://twitter.com/ktty1220" target="_blank">
+                    <img src="https://twitter.com/favicon.ico" class="favicon" alt="Twitter">
+                    <span>Twitter</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/ktty1220" target="_blank">
+                    <img src="https://github.com/favicon.ico" class="favicon" alt="GitHub">
+                    <span>GitHub</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://npmjs.org/~ktty1220" target="_blank">
+                    <img src="https://npmjs.org/favicon.ico" class="favicon" alt="npm">
+                    <span>npm</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://openpear.org/maintainer/ktty1220" target="_blank">
+                    <img src="http://openpear.org/favicon.ico" class="favicon" alt="OpenPear">
+                    <span>OpenPear</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://qiita.com/ktty1220" target="_blank">
+                    <img src="http://qiita.com/favicon.ico" class="favicon" alt="Qiita">
+                    <span>Qiita</span>
+                  </a>
+                </li>
+              </ul>
+              <h2>Skill</h2>
+              <ul id="skill">
+                <li>Node.js</li>
+                <li>JavaScript</li>
+                <li>CoffeeScript</li>
+                <li>jQuery</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>PHP(CakePHP)</li>
+                <li>Lua</li>
+                <li>Perl</li>
+                <li>MySQL</li>
+                <li>SQLite3</li>
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>Nginx</li>
+                <li>Apache</li>
+                <li>Linux(ubuntu, CentOS)</li>
+                <li>C/C++</li>
+                <li>Heroku</li>
+                <li>AppFog</li>
+              </ul>
+              <h2>Contact</h2>
+              <a id="contact" href="mailto:ktty1220@gmail.com">
+                <img class="favicon" src="https://mail.google.com/favicon.ico" alt="Gmail">
+                <span>ktty1220@gmail.com</span>
+              </a>
+            </div>
+            <div class="box">
+              <h2>Development</h2>
+              <div class="library">
+                <div class="item">
+                  <a href="https://github.com/ktty1220/jquery.popn-socialbutton" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/jquery.popn-socialbutton" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="jquery.popn-socialbutton">
+                      <span>jquery.popn-socialbutton</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/jquery.popn-socialbutton" target="_blank">
+                        Twitter, Facebook, はてなブックマークのカスタムシェアボタンを表示するjQueryプラグイン
+                      </a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/jquery.lively-layout" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/jquery.lively-layout" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="jquery.lively-layout">
+                      <span>jquery.lively-layout</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/jquery.lively-layout" target="_blank">HTMLのレイアウト表示をアニメーションで演出するjQueryプラグイン</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/bucome-watcher" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/bucome-watcher" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="bucome-watcher">
+                      <span>bucome-watcher</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/bucome-watcher" target="_blank">
+                        はてなブックマーク コメント追っかけサービス「ブコメwatcher」のソース
+                      </a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/lwl" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/lwl" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="lwl">
+                      <span>lwl</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/lwl" target="_blank">
+                        ファイル名 & 行番号付きのログを出力するNode.jsモジュール
+                      </a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/backbone.cron" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/backbone.cron" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="backbone.cron">
+                      <span>backbone.cron</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/backbone.cron" target="_blank">Backbone.jsにcron機能を実装するクラス</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/cheerio-httpcli" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/cheerio-httpcli" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="cheerio-httpcli">
+                      <span>cheerio-httpcli</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/cheerio-httpcli" target="_blank">iconvによる文字コード変換とcheerioによるHTMLパースを組み込んだNode.js用HTTPクライアントモジュール</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/php-redisutil" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/php-redisutil" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="php-redisutil">
+                      <span>php-redisutil</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/php-redisutil" target="_blank">Redisの様々な型のデータの検索および保存をそれぞれ単一のメソッドで実行するクラス</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/face-emotion.js" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/face-emotion.js" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="face-emotion.js">
+                      <span>face-emotion.js</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/face-emotion.js" target="_blank">表情をアニメーションでコントロールできるニコちゃんマーク風な顔パーツを作成するJavaScriptライブラリ</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/browser-detector.js" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/browser-detector.js" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="browser-detector.js">
+                      <span>browser-detector.js</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/browser-detector.js" target="_blank">UserAgentに依存しないブラウザ判定JavaScript</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/qilin-daemon" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/qilin-daemon" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="qilin-daemon">
+                      <span>qilin-daemon</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/qilin-daemon" target="_blank">Node.jsでホットデプロイをサポートするデーモン</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/sqlite3-webapi-kit" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/sqlite3-webapi-kit" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="sqlite3-webapi-kit">
+                      <span>sqlite3-webapi-kit</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/sqlite3-webapi-kit" target="_blank">SQLite3をデータベースサーバー化するNode.js用APIキット</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/tiny-totalizer" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/tiny-totalizer" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="tiny-totalizer">
+                      <span>tiny-totalizer</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/tiny-totalizer" target="_blank">連想配列を使用したNode.js用簡易集計モジュール</a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/ktty1220/mysql-glimit" class="wrap-link" target="_blank">
+                  </a>
+                  <h4>
+                    <a href="https://github.com/ktty1220/mysql-glimit" target="_blank">
+                      <img src="https://github.com/favicon.ico" class="favicon" alt="mysql-glimit">
+                      <span>mysql-glimit</span>
+                    </a>
+                  </h4>
+                  <div class="desc">
+                    <p>
+                      <a href="https://github.com/ktty1220/mysql-glimit" target="_blank">
+                        グループ毎に件数を指定して抽出するMySQL UDF
+                      </a>
+                    </p>
+                  </div>
+                  <div class="hubinfo clearfix">
+                    <span class="star"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span8">
+            <div class="box">
+              <h2>Products</h2>
+              <div class="products clearfix">
+                <div id="tweet_profiling" class="item">
+                  <a href="http://tweet-profiling.ap01.aws.af.cm/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://tweet-profiling.ap01.aws.af.cm/" target="_blank" style="display: block; height: 177px;">
+                    <img src="img/tweet_profiling.jpg" alt="ツイートプロファイリング">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://tweet-profiling.ap01.aws.af.cm/" target="_blank">
+                        <img src="http://tweet-profiling.ap01.aws.af.cm/favicon.ico" class="favicon" alt="ツイートプロファイリング">
+                        <span>ツイートプロファイリング</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://tweet-profiling.ap01.aws.af.cm/" target="_blank">
+                        あなたの最近のツイートを分析・集計して、ツイート内容の傾向をグラフ化するWEBサービスです。(Mashup Awards 9 応募作品)
+                      </a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="todays_moods" class="item">
+                  <a href="http://todays-moods.ap01.aws.af.cm/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://todays-moods.ap01.aws.af.cm/" target="_blank" style="display: block; height: 238px;">
+                    <img src="img/todays_moods.jpg" alt="今日の空気">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://todays-moods.ap01.aws.af.cm/" target="_blank">
+                        <img src="http://todays-moods.ap01.aws.af.cm/favicon.ico" class="favicon" alt="今日の空気">
+                        <span>今日の空気</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://todays-moods.ap01.aws.af.cm/" target="_blank">
+                        はてなブックマークのホットエントリーに登録された記事内容の感情解析を行い、その日のネット上の全体的な感情傾向の算出を試みる実験的サイトです。 (<span class="apeal">Mashup Awards 9 メタデータ株式会社賞 受賞作品</span>)</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="kampa_de_presen" class="item">
+                  <a href="http://kampa-de-presen.ap01.aws.af.cm/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://kampa-de-presen.ap01.aws.af.cm/" target="_blank" style="display: block; height: 171px;">
+                    <img src="img/kampa_de_presen.jpg" alt="Kampa! DE プレゼン">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://kampa-de-presen.ap01.aws.af.cm/" target="_blank">
+                        <img src="http://kampa-de-presen.ap01.aws.af.cm/favicon.ico" class="favicon" alt="Kampa! DE プレゼン">
+                        <span>Kampa! DE プレゼン</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://kampa-de-presen.ap01.aws.af.cm/" target="_blank">
+                        Kampa!に登録した商品のカンパ募集をアピールするプレゼンスライドを作成できるWEBサービスです。 (<span class="apeal">Mashup Awards 9 デザインエッグ株式会社賞 受賞作品</span>)</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="analyze_beauty" class="item">
+                  <a href="http://analyze-beauty.herokuapp.com/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://analyze-beauty.herokuapp.com/" target="_blank" style="display: block; height: 244px;">
+                    <img src="img/analyze_beauty.jpg" alt="美女徹底分析">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://analyze-beauty.herokuapp.com/" target="_blank">
+                        <img src="http://analyze-beauty.herokuapp.com/favicon.ico" class="favicon" alt="美女徹底分析">
+                        <span>美女徹底分析</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://analyze-beauty.herokuapp.com/" target="_blank">
+                        ランダムに表示された美女画像から好みの美女に関する関連情報を見ることができるWEBサービスです。(<span class="apeal">Mashup Awards 9  株式会社ドワンゴ賞 受賞作品</span>)</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="twitreplay" class="item">
+                  <a href="http://twitreplay.jp/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://twitreplay.jp/" target="_blank" style="display: block; height: 169px;">
+                    <img src="img/twitreplay.jpg" alt="TwitReplay">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://twitreplay.jp/" target="_blank">
+                        <img src="http://twitreplay.jp/favicon.ico" class="favicon" alt="TwitReplay">
+                        <span>TwitReplay</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://twitreplay.jp/" target="_blank">Twitterでつぶやかれたツイートをまとめて、ノベルゲームのような動きのある動画形式で再生できる「リプレイ」を作成し、投稿・閲覧できるWEBサービスです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="to1jp" class="item">
+                  <a href="http://to-1.jp/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://to-1.jp/" target="_blank" style="display: block; height: 338px;">
+                    <img src="img/to1jp.jpg" alt="To-1グランプリ">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://to-1.jp/" target="_blank">
+                        <img src="http://to-1.jp/favicon.ico" class="favicon" alt="To-1グランプリ">
+                        <span>To-1グランプリ</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://to-1.jp/" target="_blank">Twitterの日本語ハッシュタグで寄せらせた人気のお題に対するツイートとユーザーのランキングをデイリーで集計しているサイトです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="bucome-watcher" class="item">
+                  <a href="http://bucome-watcher.herokuapp.com/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://bucome-watcher.herokuapp.com/" target="_blank" style="display: block; height: 189px;">
+                    <img src="img/bucome-watcher.jpg" alt="ブコメwatcher">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://bucome-watcher.herokuapp.com/" target="_blank">
+                        <img src="http://bucome-watcher.herokuapp.com/favicon.ico" class="favicon" alt="ブコメwatcher">
+                        <span>ブコメwatcher</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://bucome-watcher.herokuapp.com/" target="_blank">はてなブックマークの複数のエントリーのコメントを同時進行でウォッチできるサービスです。ソースはGitHubで公開しています(MITライセンス)。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="dqnqa" class="item">
+                  <a href="http://DQNQA.net/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://DQNQA.net/" target="_blank" style="display: block; height: 213px;">
+                    <img src="img/dqnqa.jpg" alt="トンデモ面接風Q&amp;A">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://DQNQA.net/" target="_blank">
+                        <img src="http://DQNQA.net/favicon.ico" class="favicon" alt="トンデモ面接風Q&amp;A">
+                        <span>トンデモ面接風Q&amp;A</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://DQNQA.net/" target="_blank">日頃思っている素朴な疑問を面接官と学生に扮して自由にやり取りできる登録不要のQ&amp;Aサイトです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="nicomment" class="item">
+                  <a href="http://nicomment.batch-re-search.net/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://nicomment.batch-re-search.net/" target="_blank" style="display: block; height: 252px;">
+                    <img src="img/nicomment.jpg" alt="ニコニコ動画コメント@ばっちりサーチ.net">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://nicomment.batch-re-search.net/" target="_blank">
+                        <img src="http://nicomment.batch-re-search.net/favicon.ico" class="favicon" alt="ニコニコ動画コメント@ばっちりサーチ.net">
+                        <span>ニコニコ動画コメント@ばっちりサーチ.net</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://nicomment.batch-re-search.net/" target="_blank">ニコニコ動画に投稿された動画のコメントを分析し、コメントの傾向や動画の評判などを細かく簡単に調べることができるWEBサービスです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="hotword" class="item">
+                  <a href="http://hotword.batch-re-search.net/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://hotword.batch-re-search.net/" target="_blank" style="display: block; height: 189px;">
+                    <img src="img/hotword.jpg" alt="話題のワード@ばっちりサーチ.net">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://hotword.batch-re-search.net/" target="_blank">
+                        <img src="http://hotword.batch-re-search.net/favicon.ico" class="favicon" alt="話題のワード@ばっちりサーチ.net">
+                        <span>話題のワード@ばっちりサーチ.net</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://hotword.batch-re-search.net/" target="_blank">今、ネット上で話題になっているワードと、そのワードに関するニュースやブログ・動画などの情報をデイリーでまとめているWEB情報サービスです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="tweet" class="item">
+                  <a href="http://tweet.batch-re-search.net/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://tweet.batch-re-search.net/" target="_blank" style="display: block; height: 218px;">
+                    <img src="img/tweet.jpg" alt="旬なツイート@ばっちりサーチ.net">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://tweet.batch-re-search.net/" target="_blank">
+                        <img src="http://tweet.batch-re-search.net/favicon.ico" class="favicon" alt="旬なツイート@ばっちりサーチ.net">
+                        <span>旬なツイート@ばっちりサーチ.net</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://tweet.batch-re-search.net/" target="_blank">気になる単語に関する最新のツイートをさまざまな角度から分析するツイート分析WEBサービスです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="event" class="item">
+                  <a href="http://event.batch-re-search.net/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://event.batch-re-search.net/" target="_blank" style="display: block; height: 221px;">
+                    <img src="img/event.jpg" alt="日本全国イベント情報@ばっちりサーチ.net">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://event.batch-re-search.net/" target="_blank">
+                        <img src="http://event.batch-re-search.net/favicon.ico" class="favicon" alt="日本全国イベント情報@ばっちりサーチ.net">
+                        <span>日本全国イベント情報@ばっちりサーチ.net</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://event.batch-re-search.net/" target="_blank">日本全国のイベント情報を細かな条件ですみずみまで検索できる情報サービスです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="sweets" class="item">
+                  <a href="http://sweets.batch-re-search.net/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://sweets.batch-re-search.net/" target="_blank" style="display: block; height: 221px;">
+                    <img src="img/sweets.jpg" alt="お取り寄せスイーツ@ばっちりサーチ.net">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://sweets.batch-re-search.net/" target="_blank">
+                        <img src="http://sweets.batch-re-search.net/favicon.ico" class="favicon" alt="お取り寄せスイーツ@ばっちりサーチ.net">
+                        <span>お取り寄せスイーツ@ばっちりサーチ.net</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://sweets.batch-re-search.net/" target="_blank">ご希望に合ったお取り寄せスイーツをすみずみまで検索できる情報サービスです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+                <div id="rrgrm" class="item">
+                  <a href="http://rrgrm.batch-re-search.net/" class="wrap-link" target="_blank">
+                  </a>
+                  <a href="http://rrgrm.batch-re-search.net/" target="_blank" style="display: block; height: 236px;">
+                    <img src="img/rrgrm.jpg" alt="沿線グルメスポット@ばっちりサーチ.net">
+                  </a>
+                  <div class="desc">
+                    <h4>
+                      <a href="http://rrgrm.batch-re-search.net/" target="_blank">
+                        <img src="http://rrgrm.batch-re-search.net/favicon.ico" class="favicon" alt="沿線グルメスポット@ばっちりサーチ.net">
+                        <span>沿線グルメスポット@ばっちりサーチ.net</span>
+                      </a>
+                    </h4>
+                    <p>
+                      <a href="http://rrgrm.batch-re-search.net/" target="_blank">指定した駅区間のグルメスポットをすみずみまで検索できる情報検索サービスです。</a>
+                    </p>
+                  </div>
+                  <div class="social clearfix">
+                    <span class="hatena"></span>
+                    <span class="facebook"></span>
+                    <span class="twitter"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="push"></div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+    <footer>
+      <div class="content">
+        <span>Copyright &copy; 2013-2014</span>
+        <a href="./">ktty1220</a>
+        <span>All rights reserved.</span>
+      </div>
+    </footer>
+    <script src="js/css_browser_selector.js"></script>
+    <script src="js/array_seq.js"></script>
+    <script src="js/jquery.betterToggle.js"></script>
+    <script src="js/jquery.masonry.js"></script>
+    <script>var __slice = Array.prototype.slice;var __hasProp = Object.prototype.hasOwnProperty;var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };var __extends = function(child, parent) {  for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; }  function ctor() { this.constructor = child; }  ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype;  return child; };var __indexOf = Array.prototype.indexOf || function(item) {  for (var i = 0, l = this.length; i < l; i++) {    if (this[i] === item) return i;  } return -1; };(function () {
+      return $(function() {
+        var getBox;
+        getBox = function(elem) {
+          if (elem.parent().hasClass('item')) {
+            return elem.parent();
+          }
+          return elem.parentsUntil('.item').parent().eq(0);
+        };
+        $('.item a').mouseenter(function() {
+          return getBox($(this)).addClass('hover');
+        }).mouseleave(function() {
+          return getBox($(this)).removeClass('hover');
+        });
+        $('.products').masonry({
+          itemSelector: '.item'
+        }).masonry('reload', function() {
+          var n, _j, _results;
+          n = $(this).length;
+          return (function() {
+            _results = [];
+            for (var _j = 1; 1 <= n ? _j <= n : _j >= n; 1 <= n ? _j++ : _j--){ _results.push(_j); }
+            return _results;
+          }).apply(this).seq((function(_this) {
+            return function(item, idx, next) {
+              $(_this).eq(idx).betterToggle();
+              return (function() {
+                return setTimeout(function() {
+                  return next();
+                }, 50);
+              })();
+            };
+          })(this), function(err) {});
+        });
+        if (!/localhost/.test(location.href)) {
+          $('.products .item').each(function(idx) {
+            var counter, url;
+            url = $(this).find('a').attr('href');
+            counter = $(this).find('.social .facebook');
+            $.ajax({
+              url: "https://graph.facebook.com/" + url,
+              dataType: 'jsonp',
+              success: (function(_this) {
+                return function(json1) {
+                  var likes, _ref, _ref1;
+                  if (json1.shares != null) {
+                    return counter.show().text((_ref = json1.shares) != null ? _ref : 0);
+                  } else {
+                    likes = (_ref1 = json1.likes) != null ? _ref1 : 0;
+                    return $.ajax({
+                      url: "https://graph.facebook.com/fql?q=" + (encodeURIComponent("SELECT total_count FROM link_stat WHERE url='" + url + "'")),
+                      dataType: 'jsonp',
+                      success: function(json2) {
+                        var total, _ref2, _ref3;
+                        total = (_ref2 = json2 != null ? (_ref3 = json2.data[0]) != null ? _ref3.total_count : void 0 : void 0) != null ? _ref2 : 0;
+                        return counter.show().text(likes + total);
+                      }
+                    });
+                  }
+                };
+              })(this)
+            });
+            $.ajax({
+              url: "http://urls.api.twitter.com/1/urls/count.json?url=" + url,
+              dataType: 'jsonp',
+              success: (function(_this) {
+                return function(json) {
+                  var _ref;
+                  return $(_this).find('.social .twitter').show().text((_ref = json.count) != null ? _ref : 0);
+                };
+              })(this)
+            });
+            return $.ajax({
+              url: "http://api.b.st-hatena.com/entry.count?url=" + url,
+              dataType: 'jsonp',
+              success: (function(_this) {
+                return function(json) {
+                  return $(_this).find('.social .hatena').show().text(json != null ? json : 0);
+                };
+              })(this)
+            });
+          });
+          return $('.library .item').each(function(idx) {
+            var repo;
+            repo = $(this).find('h4').text().replace(/^\s+/, '').replace(/\s+$/, '');
+            return $.ajax({
+              url: "https://api.github.com/repos/ktty1220/" + repo,
+              dataType: 'jsonp',
+              success: (function(_this) {
+                return function(json) {
+                  var _ref;
+                  return $(_this).find('.hubinfo .star').show().text((_ref = json.data.watchers) != null ? _ref : 0);
+                };
+              })(this)
+            });
+          });
+        }
+      });
+    }).call(this);</script>
   </body>
 </html>

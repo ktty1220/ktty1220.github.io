@@ -1,0 +1,158 @@
+.border-radius (@radius) {
+	border-radius: @arguments;
+	-webkit-border-radius: @arguments;
+	-moz-border-radius: @arguments;
+	-ms-border-radius: @arguments;
+	-o-border-radius: @arguments;
+}
+
+.box-shadow (@x: 0, @y: 1px, @blur: 1px, @color: #000) {
+	box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	-ms-box-shadow: @arguments;
+	-o-box-shadow: @arguments;
+}
+
+.box-shadow-in (@x: 0, @y: 1px, @blur: 1px, @color: #000) {
+	box-shadow: @arguments inset;
+	-webkit-box-shadow: @arguments inset;
+	-moz-box-shadow: @arguments inset;
+	-ms-box-shadow: @arguments inset;
+	-o-box-shadow: @arguments inset;
+}
+
+.gradient (@start, @end) {
+  background-color: @start;
+	background-image: -moz-linear-gradient(top, @start, @end);
+	background-image: -ms-linear-gradient(top, @start, @end);
+	background-image: -o-linear-gradient(top, @start, @end);
+	background-image: -webkit-linear-gradient(top, @start, @end);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, @start), color-stop(1, @end));
+	background-image: linear-gradient(top, @start, @end);
+	background-image: linear-gradient(to bottom, @start 0%, @end 100%);
+	//filter: ~"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="@start~", endColorstr="@end~")";
+	//-ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="@start~", endColorstr="@end~")";
+}
+
+.bgsize(@width, @height) {
+	background-size: @arguments;
+	-webkit-background-size: @arguments; 
+	-moz-background-size: @arguments; 
+	-ms-background-size: @arguments; 
+	-o-background-size: @arguments; 
+}
+
+.lean(@angle) {
+	-moz-transform:rotate(@angle);
+	-webkit-transform:rotate(@angle);
+	-o-transform:rotate(@angle);
+	-ms-transform :otate(@angle);
+	transform:rotate(@angle);
+}
+
+.font-family () {
+	//font-family: Verdana, Arial, "メイリオ", Meiryo, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "MS P Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.hidden() {
+	display: none;
+}
+
+.text-left() {
+	text-align: left;
+}
+
+.text-right() {
+	text-align: right;
+}
+
+.text-center() {
+	text-align: center;
+}
+
+.nowrap() {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.inline-block() {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zero-spacing() {
+	margin: 0;
+	padding: 0;
+}
+
+.word-break {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.margin-lr(@margin: 0) {
+	margin-left: @margin;
+	margin-right: @margin;
+}
+
+.padding-lr(@padding: 0) {
+	padding-left: @padding;
+	padding-right: @padding;
+}
+
+.full-area() {
+	width: 100%;
+	height: 100%;
+}
+
+.abs-pos-tl(@top: 0, @left: 0) {
+	position: absolute;
+	top: @top;
+	left: @left;
+}
+
+.abs-pos-tr(@top: 0, @right: 0) {
+	position: absolute;
+	top: @top;
+	right: @right;
+}
+
+.abs-pos-bl(@bottom: 0, @left: 0) {
+	position: absolute;
+	bottom: @bottom;
+	left: @left;
+}
+
+.abs-pos-br(@bottom: 0, @right: 0) {
+	position: absolute;
+	bottom: @bottom;
+	right: @right;
+}
+
+.square(@px) {
+	width: @px;
+	height: @px;
+}
+
+.square-max(@px) {
+	max-width: @px;
+	max-height: @px;
+}
+
+.square-min(@px) {
+	min-width: @px;
+	min-height: @px;
+}
+
+.border-lr-width(@width) {
+	border-left-width: @width;
+	border-right-width: @width;
+}
+
+.middle-height(@height) {
+	height: @height;
+	line-height: @height;
+}
