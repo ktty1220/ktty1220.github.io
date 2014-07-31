@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>browser-detector.js</title>
+  <style type="text/css">
+    body {
+      width: 800px;
+      margin: 0 auto;
+      font-family: Georgia, "Times New Roman", Times, Verdana, Arial, "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px;
+    }
+    p span {
+      padding: 2px 10px;
+      margin: 4px;
+      border-radius: 3px;
+      background-color: #fee;
+      border: solid 1px #faa;
+    }
+  </style>
+</head>
+<body>
+  <script src="browser-detector.min.js"></script>
+
+  <h1>browser-detector.js実行後の&lt;HTML&gt;タグのクラス名</h1>
+  <p class="class-list">
+    <script type="text/javascript">
+      var c = document.getElementsByTagName('html')[0].className.split(/\s+/);
+      for (var i = 0; i < c.length; i++) {
+        document.write('<span>' + c[i] + '</span>');
+      }
+    </script>
+  </P>
+</body>
+</html>
