@@ -170,6 +170,9 @@ footer .content a:hover {
 #content .box .library .item .desc .apeal {
   color: #ff4;
 }
+#content .box .library .item .desc .end {
+  color: #f66;
+}
 #content .box .library .item .desc h4 {
   color: #fff;
 }
@@ -240,11 +243,18 @@ footer .content a:hover {
 #content .box .products .item .desc .apeal {
   color: #ff4;
 }
+#content .box .products .item .desc .end {
+  color: #f66;
+}
 #content .box .products .item .desc h4 {
   color: #fff;
 }
 #content .box .products .item .desc h4 .favicon {
   margin-top: -6px;
+}
+#content .box .products .item.service-end.hover {
+  background-color: #333;
+  border: solid 5px #333;
 }
 #content .box .products .item .social {
   margin-right: 4px;
