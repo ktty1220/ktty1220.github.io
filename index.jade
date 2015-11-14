@@ -1,0 +1,366 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset='UTF-8')
+    //meta(name='viewport', content='initial-scale=1')
+    meta(name='description', content='ktty1220のポートフォリオ')
+    meta(name='keywords', content='ktty1220')
+    title ktty1220@Portfolio
+    -
+      var cssList = [
+        'normalize',
+        'clearfix',
+        'bootstrap.min',
+        'style'
+      ];
+    - cssList.forEach(function (css) {
+      link(rel='stylesheet', href='css/' + css + '.css')
+    - });
+    != '\n    <!--[if lt IE 9]>'
+    script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+    != '\n    <![endif]-->'
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+
+  body
+    div#wrap
+      div#content.content
+        div.row-fluid
+          div.span4
+            div.box
+              h1
+                img(src='img/under_construction_normal.png', alt='avatar')
+                span ktty1220
+              h2 About Me
+              p.
+                個人でWebサービスをいくつか運営しています。Webサービスの運営で飯を食べていけるよう修行中です。（達成度#[span.percent 0.5%])
+              -
+                var favicon = function (url) {
+                  return url.replace(/(:\/\/[^/]+)\/.*$/, '$1/favicon.ico');
+                };
+              h2 Services
+              -
+                var services = {
+                  Twitter: 'https://twitter.com/ktty1220',
+                  GitHub: 'https://github.com/ktty1220',
+                  npm: 'https://npmjs.org/~ktty1220',
+                  OpenPear: 'http://openpear.org/maintainer/ktty1220',
+                  Qiita: 'http://qiita.com/ktty1220'
+                };
+              ul#services
+                each link, name in services
+                  li
+                    a(href=link, target='_blank')
+                      img.favicon(src=favicon(link), alt=name)
+                      span #{name}
+
+              h2 Skill
+              -
+                var skills = [
+                  'Node.js',
+                  'JavaScript(ES5, ES6)',
+                  'CoffeeScript',
+                  'jQuery',
+                  'HTML5',
+                  'CSS3',
+                  'PHP(CakePHP)',
+                  'Lua',
+                  'Perl',
+                  'MySQL',
+                  'SQLite3',
+                  'PostgreSQL',
+                  'MongoDB',
+                  'Redis',
+                  'Nginx',
+                  'Apache',
+                  'Linux(ubuntu, CentOS)',
+                  'C/C++',
+                  'Android App',
+                  'Heroku'
+                ];
+              ul#skill
+                - skills.forEach(function (skill) {
+                  li #{skill}
+                - });
+
+              h2 Contact
+              a#contact(href='mailto:ktty1220@gmail.com')
+                img.favicon(src=favicon('https://mail.google.com/'), alt='Gmail')
+                span ktty1220@gmail.com
+
+            div.box
+              h2 Development
+              div.library
+                -
+                  var libs = {
+                    'cheerio-httpcli': 'iconvによる文字コード変換とcheerioによるHTMLパースを組み込んだNode.js用HTTPクライアントモジュール',
+                    'jquery.popn-socialbutton': 'Twitter, Facebook, はてなブックマークのカスタムシェアボタンを表示するjQueryプラグイン',
+                    'jquery.lively-layout': 'HTMLのレイアウト表示をアニメーションで演出するjQueryプラグイン',
+                    'gulp-packages': 'gulp package management helper',
+                    'lwl': 'ファイル名 & 行番号付きのログを出力するNode.jsモジュール',
+                    'cordova-filesystem': 'PhoneGapのファイルAPIを使いやすくするラッパー',
+                    'bucome-watcher': 'はてなブックマーク コメント追っかけサービス「ブコメwatcher」のソース',
+                    'backbone.cron': 'Backbone.jsにcron機能を実装するクラス',
+                    'qilin-daemon': 'Node.jsでホットデプロイをサポートするデーモン',
+                    'vivi': 'PhoneGapなどのHTMLを使用するモバイルアプリ用のフレームワーク',
+                    'php-redisutil': 'Redisの様々な型のデータの検索および保存をそれぞれ単一のメソッドで実行するクラス',
+                    'sqlite3-webapi-kit': 'SQLite3をデータベースサーバー化するNode.js用APIキット',
+                    'face-emotion.js': '表情をアニメーションでコントロールできるニコちゃんマーク風な顔パーツを作成するJavaScriptライブラリ',
+                    'cordova-plugin-exdialogs': '公式でサポートされていないネイティブダイアログを実装するPhoneGapプラグイン',
+                    'cordova-native-menu': 'PhoneGapにAndroidネイティブのメニューを実装するパーツ',
+                    'peridot-starter-kit': 'Starter Kit for Peridot PHP testing Framework',
+                    'gulp-peridot': 'Peridot PHP Test framework runner for gulp',
+                    'mini-socialbutton': 'firefoxのツールバーにはてなブックマークとTwitterのソーシャルカウント付きのボタンを設置するアドオン',
+
+                    'browser-detector.js': 'UserAgentに依存しないブラウザ判定JavaScript',
+                    'tiny-totalizer': '連想配列を使用したNode.js用簡易集計モジュール',
+                    'mysql-glimit': 'グループ毎に件数を指定して抽出するMySQL UDF'
+                  };
+                each desc, name in libs
+                  div.item
+                    - var repo = 'https://github.com/ktty1220/' + name;
+                    a.wrap-link(href=repo, target='_blank')
+                    h4
+                      a(href=repo, target='_blank')
+                        img.favicon(src=favicon(repo), alt=name)
+                        span name
+                    div.desc
+                      p
+                        a(href=repo, target='_blank') #{desc}
+                    div.hubinfo.clearfix
+                      span.star
+
+          div.span8
+            div.box
+              h2 Products
+              div.products.clearfix
+                -
+                  var products = {
+                    nstl: {
+                      name: 'ニコニコ検索タイムライン',
+                      link: 'https://play.google.com/store/apps/details?id=me.ktty1220.nstl',
+                      desc: 'ニコニコ動画に投稿された動画を公式よりも詳細な条件で一括検索できる非公式アプリです。条件に該当した動画はTwitterのタイムラインのようにリスト表示されます。',
+                      favicon: 'https://ssl.gstatic.com/android/market_images/web/favicon.ico',
+                      height: 186
+                    },
+                    kaiten_nico: {
+                      name: '回転ニコ',
+                      link: 'http://kaiten-nico.ktty1220.me/',
+                      desc: '【HTML5 Japan Cup 2014 応募作品】指定した単語でniconicoサービス全体を検索して、該当するコンテンツを仕入れて回転寿司のようにレーンに流していくWEBサービスです。',
+                      height: 197
+                    },
+                    analyze_beauty: {
+                      name: '美女徹底分析',
+                      link: 'http://analyze-beauty.herokuapp.com/',
+                      desc: '【<span class="apeal">Mashup Awards 9  株式会社ドワンゴ賞 受賞作品</span>】ランダムに表示された美女画像から好みの美女に関する関連情報を見ることができるWEBサービスです。',
+                      height: 244
+                    },
+                    to1jp: {
+                      name: 'To-1グランプリ',
+                      link: 'http://to-1.jp/',
+                      desc: 'Twitterの日本語ハッシュタグで寄せらせた人気のお題に対するツイートとユーザーのランキングをデイリーで集計しているサイトです。',
+                      height: 338
+                    },
+                    bucome_watcher: {
+                      name: 'ブコメwatcher',
+                      link: 'http://bucome-watcher.herokuapp.com/',
+                      desc: 'はてなブックマークの複数のエントリーのコメントを同時進行でウォッチできるサービスです。ソースはGitHubで公開しています(MITライセンス)。',
+                      height: 189
+                    },
+                    articlip: {
+                      name: 'Articlip',
+                      link: 'http://articlip.ktty1220.me/',
+                      desc: 'ブログやニュースの記事部分だけを抽出して簡易ブラウザで軽快にサクサク閲覧することができるAndroid用RSSリーダーアプリです。',
+                      height: 210
+                    },
+                    mini_socialbutton: {
+                      name: 'mini SocialButton',
+                      link: 'https://addons.mozilla.org/ja/firefox/addon/mini-socialbutton/',
+                      desc: 'ツールバーにソーシャルカウントを表示するボタンを設置します。ボタンを押すとコメント一覧ページを別タブで開きます。',
+                      height: 160
+                    },
+                    nicomment: {
+                      name: 'ニコニコ動画コメント@ばっちりサーチ.net',
+                      link: 'http://nicomment.batch-re-search.net/',
+                      desc: 'ニコニコ動画に投稿された動画のコメントを分析し、コメントの傾向や動画の評判などを細かく簡単に調べることができるWEBサービスです。',
+                      height: 252
+                    },
+                    hotword: {
+                      name: '話題のワード@ばっちりサーチ.net',
+                      link: 'http://hotword.batch-re-search.net/',
+                      desc: '今、ネット上で話題になっているワードと、そのワードに関するニュースやブログ・動画などの情報をデイリーでまとめているWEB情報サービスです。',
+                      height: 189
+                    },
+                    tweet: {
+                      name: '旬なツイート@ばっちりサーチ.net',
+                      link: 'http://tweet.batch-re-search.net/',
+                      desc: '気になる単語に関する最新のツイートをさまざまな角度から分析するツイート分析WEBサービスです。',
+                      height: 218
+                    },
+                    event: {
+                      name: '日本全国イベント情報@ばっちりサーチ.net',
+                      link: 'http://event.batch-re-search.net/',
+                      desc: '日本全国のイベント情報を細かな条件ですみずみまで検索できる情報サービスです。',
+                      height: 221
+                    },
+                    sweets: {
+                      name: 'お取り寄せスイーツ@ばっちりサーチ.net',
+                      link: 'http://sweets.batch-re-search.net/',
+                      desc: 'ご希望に合ったお取り寄せスイーツをすみずみまで検索できる情報サービスです。',
+                      height: 221
+                    },
+                    rrgrm: {
+                      name: '沿線グルメスポット@ばっちりサーチ.net',
+                      link: 'http://rrgrm.batch-re-search.net/',
+                      desc: '指定した駅区間のグルメスポットをすみずみまで検索できる情報検索サービスです。',
+                      height: 236
+                    },
+                    tweet_profiling: {
+                      end: true,
+                      name: 'ツイートプロファイリング',
+                      link: 'http://tweet-profiling.ap01.aws.af.cm/',
+                      desc: '【Mashup Awards 9 応募作品】あなたの最近のツイートを分析・集計して、ツイート内容の傾向をグラフ化するWEBサービスです。(<span class="end">2015-11-08にサービスを終了しました</span>)',
+                      height: 177
+                    },
+                    todays_moods: {
+                      end: true,
+                      name: '今日の空気',
+                      link: 'http://todays-moods.ap01.aws.af.cm/',
+                      desc: '【<span class="apeal">Mashup Awards 9 メタデータ株式会社賞 受賞作品</span>】はてなブックマークのホットエントリーに登録された記事内容の感情解析を行い、その日のネット上の全体的な感情傾向の算出を試みる実験的サイトです。(<span class="end">2015-11-08にサービスを終了しました</span>)',
+                      height: 238
+                    },
+                    kampa_de_presen: {
+                      end: true,
+                      name: 'Kampa! DE プレゼン',
+                      link: 'http://kampa-de-presen.ap01.aws.af.cm/',
+                      desc: '【<span class="apeal">Mashup Awards 9 デザインエッグ株式会社賞 受賞作品</span>】Kampa!に登録した商品のカンパ募集をアピールするプレゼンスライドを作成できるWEBサービスです。(<span class="end">2015-11-08にサービスを終了しました</span>)',
+                      height: 171
+                    },
+                    twitreplay: {
+                      end: true,
+                      name: 'TwitReplay',
+                      link: 'http://twitreplay.jp/',
+                      desc: 'Twitterでつぶやかれたツイートをまとめて、ノベルゲームのような動きのある動画形式で再生できる「リプレイ」を作成し、投稿・閲覧できるWEBサービスです(<span class="end">2014-08-31にサービスを終了しました</span>)。',
+                      height: 169
+                    },
+                    dqnqa: {
+                      end: true,
+                      name: 'トンデモ面接風Q&A',
+                      link: 'http://DQNQA.net/',
+                      desc: '日頃思っている素朴な疑問を面接官と学生に扮して自由にやり取りできる登録不要のQ&amp;Aサイトです(<span class="end">2015-03-28にサービスを終了しました</span>)。',
+                      height: 213
+                    }
+                  };
+                each info, ss in products
+                  - var c = [ 'item' ];
+                  - var icon = info.favicon;
+                  if info.end
+                    - c.push('service-end');
+                  div(id=ss, class=c.join(' '), 'data-url'=info.link)
+                    if info.end
+                      div(style='display:block; height:' + info.height + 'px')
+                        img(src='img/' + ss + '.jpg', alt=info.name)
+                      - icon = icon || ('img/' + ss + '.ico');
+                    else
+                      a.wrap-link(href=info.link, target='_blank')
+                      a(href=info.link, target='_blank', style='display:block; height:' + info.height + 'px')
+                        img(src='img/' + ss + '.jpg', alt=info.name)
+                      - icon = icon || favicon(info.link);
+                    div.desc
+                      h4
+                        if info.end
+                          img.favicon(src=icon, alt=info.name)
+                          span #{info.name}
+                        else
+                          a(href=info.link, target='_blank')
+                            img.favicon(src=icon, alt=info.name)
+                            span #{info.name}
+                      p
+                        if info.end
+                          div!= info.desc
+                        else
+                          a(href=info.link, target='_blank')!= info.desc
+                    div.social.clearfix
+                      span.hatena
+                      span.facebook
+                      span.twitter
+
+      div#push
+
+    footer
+      div.content
+        span Copyright &copy; 2013-2015
+        a(href='./') ktty1220
+        span All rights reserved.
+
+    -
+      var jsList = [
+        'css_browser_selector',
+        'array_seq',
+        'jquery.betterToggle',
+        'jquery.masonry'
+      ];
+    - jsList.forEach(function (js) {
+      script(src='js/' + js + '.js')
+    - });
+
+    script
+      :coffee-script
+        $ ->
+          getBox = (elem) ->
+            return elem.parent() if elem.parent().hasClass 'item'
+            elem.parentsUntil('.item').parent().eq(0)
+
+          $('.item a').mouseenter () ->
+            getBox($(@)).addClass 'hover'
+          .mouseleave () ->
+            getBox($(@)).removeClass 'hover'
+
+          $('.products').masonry
+            itemSelector: '.item'
+          .masonry 'reload', () ->
+            n = $(@).length
+            [1..n].seq (item, idx, next) =>
+              $(@).eq(idx).betterToggle()
+              do () ->
+                setTimeout () ->
+                  next()
+                , 50
+            , (err) ->
+
+          unless /localhost/.test location.href
+            $('.products .item').each (idx) ->
+              #url = $(@).find('a').attr('href')
+              url = $(@).data 'url'
+              counter = $(@).find('.social .facebook')
+              $.ajax
+                url: "https://graph.facebook.com/#{url}"
+                dataType: 'jsonp',
+                success: (json1) =>
+                  if json1.shares?
+                    counter.show().text json1.shares ? 0
+                  else
+                    likes = json1.likes ? 0
+                    $.ajax
+                      url: "https://graph.facebook.com/fql?q=#{encodeURIComponent "SELECT total_count FROM link_stat WHERE url='#{url}'"}"
+                      dataType: 'jsonp',
+                      success: (json2) =>
+                        total = json2?.data[0]?.total_count ? 0
+                        counter.show().text likes + total
+
+              $.ajax
+                url: "http://urls.api.twitter.com/1/urls/count.json?url=#{url}"
+                dataType: 'jsonp',
+                success: (json) => $(@).find('.social .twitter').show().text json.count ? 0
+
+              $.ajax
+                url: "http://api.b.st-hatena.com/entry.count?url=#{url}"
+                dataType: 'jsonp',
+                success: (json) => $(@).find('.social .hatena').show().text json ? 0
+
+            $('.library .item').each (idx) ->
+              repo = $(@).find('h4').text().replace(/^\s+/, '').replace(/\s+$/, '')
+              $.ajax
+                url: "https://api.github.com/repos/ktty1220/#{repo}"
+                dataType: 'jsonp',
+                success: (json) =>
+                  $(@).find('.hubinfo .star').show().text json.data.watchers ? 0
