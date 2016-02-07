@@ -35,16 +35,19 @@ html(lang='ja')
                 個人でWebサービスをいくつか運営しています。Webサービスの運営で飯を食べていけるよう修行中です。（達成度#[span.percent 0.5%])
               -
                 var favicon = function (url) {
+                  if (/play\.google\.com/.test(url)) {
+                    return 'https://ssl.gstatic.com/android/market_images/web/favicon.ico';
+                  }
                   return url.replace(/(:\/\/[^/]+)\/.*$/, '$1/favicon.ico');
                 };
               h2 Services
               -
                 var services = {
                   Twitter: 'https://twitter.com/ktty1220',
+                  Qiita: 'http://qiita.com/ktty1220',
                   GitHub: 'https://github.com/ktty1220',
                   npm: 'https://npmjs.org/~ktty1220',
-                  OpenPear: 'http://openpear.org/maintainer/ktty1220',
-                  Qiita: 'http://qiita.com/ktty1220'
+                  GooglePlay: 'https://play.google.com/store/apps/developer?id=ktty1220'
                 };
               ul#services
                 each link, name in services
@@ -57,25 +60,26 @@ html(lang='ja')
               -
                 var skills = [
                   'Node.js',
-                  'JavaScript(ES5, ES6)',
+                  'JavaScript(ES5, ES6, jQuery)',
+                  'TypeScript',
                   'CoffeeScript',
-                  'jQuery',
                   'HTML5',
                   'CSS3',
                   'PHP(CakePHP)',
                   'Lua',
                   'Perl',
                   'MySQL',
-                  'SQLite3',
                   'PostgreSQL',
+                  'SQLite3',
                   'MongoDB',
                   'Redis',
-                  'Nginx',
                   'Apache',
-                  'Linux(ubuntu, CentOS)',
+                  'Nginx',
                   'C/C++',
                   'Android App',
-                  'Heroku'
+                  'Linux(ubuntu, CentOS)',
+                  'Heroku',
+                  'OpenShift'
                 ];
               ul#skill
                 - skills.forEach(function (skill) {
@@ -148,6 +152,12 @@ html(lang='ja')
                       desc: '【Mashup Awards 9 応募作品】あなたの最近のツイートを分析・集計して、ツイート内容の傾向をグラフ化するWEBサービスです。',
                       height: 177
                     },
+                    analyze_beauty: {
+                      name: '美女徹底分析',
+                      link: 'http://analyze-beauty.ktty1220.me/',
+                      desc: '【<span class="apeal">Mashup Awards 9  株式会社ドワンゴ賞 受賞作品</span>】ランダムに表示された美女画像から好みの美女に関する関連情報を見ることができるWEBサービスです。',
+                      height: 244
+                    },
                     kaiten_nico: {
                       name: '回転ニコ',
                       link: 'http://kaiten-nico.ktty1220.me/',
@@ -214,12 +224,6 @@ html(lang='ja')
                       desc: '指定した駅区間のグルメスポットをすみずみまで検索できる情報検索サービスです。',
                       height: 236
                     },
-                    analyze_beauty: {
-                      name: '美女徹底分析',
-                      link: 'http://analyze-beauty.herokuapp.com/',
-                      desc: '【<span class="apeal">Mashup Awards 9  株式会社ドワンゴ賞 受賞作品</span>】ランダムに表示された美女画像から好みの美女に関する関連情報を見ることができるWEBサービスです。',
-                      height: 244
-                    },
                     todays_moods: {
                       end: true,
                       name: '今日の空気',
@@ -278,10 +282,10 @@ html(lang='ja')
                           div!= info.desc
                         else
                           a(href=info.link, target='_blank')!= info.desc
-                    div.social.clearfix
-                      span.hatena
-                      span.facebook
-                      span.twitter
+                    //div.social.clearfix
+                    //  span.hatena
+                    //  span.facebook
+                    //  span.twitter
 
       div#push
 
@@ -327,34 +331,34 @@ html(lang='ja')
             , (err) ->
 
           unless /localhost/.test location.href
-            $('.products .item').each (idx) ->
-              #url = $(@).find('a').attr('href')
-              url = $(@).data 'url'
-              counter = $(@).find('.social .facebook')
-              $.ajax
-                url: "https://graph.facebook.com/#{url}"
-                dataType: 'jsonp',
-                success: (json1) =>
-                  if json1.shares?
-                    counter.show().text json1.shares ? 0
-                  else
-                    likes = json1.likes ? 0
-                    $.ajax
-                      url: "https://graph.facebook.com/fql?q=#{encodeURIComponent "SELECT total_count FROM link_stat WHERE url='#{url}'"}"
-                      dataType: 'jsonp',
-                      success: (json2) =>
-                        total = json2?.data[0]?.total_count ? 0
-                        counter.show().text likes + total
+            #$('.products .item').each (idx) ->
+            #  #url = $(@).find('a').attr('href')
+            #  url = $(@).data 'url'
+            #  counter = $(@).find('.social .facebook')
+            #  $.ajax
+            #    url: "https://graph.facebook.com/#{url}"
+            #    dataType: 'jsonp',
+            #    success: (json1) =>
+            #      if json1.shares?
+            #        counter.show().text json1.shares ? 0
+            #      else
+            #        likes = json1.likes ? 0
+            #        $.ajax
+            #          url: "https://graph.facebook.com/fql?q=#{encodeURIComponent "SELECT total_count FROM link_stat WHERE url='#{url}'"}"
+            #          dataType: 'jsonp',
+            #          success: (json2) =>
+            #            total = json2?.data[0]?.total_count ? 0
+            #            counter.show().text likes + total
 
-              $.ajax
-                url: "http://urls.api.twitter.com/1/urls/count.json?url=#{url}"
-                dataType: 'jsonp',
-                success: (json) => $(@).find('.social .twitter').show().text json.count ? 0
+            #  $.ajax
+            #    url: "http://urls.api.twitter.com/1/urls/count.json?url=#{url}"
+            #    dataType: 'jsonp',
+            #    success: (json) => $(@).find('.social .twitter').show().text json.count ? 0
 
-              $.ajax
-                url: "http://api.b.st-hatena.com/entry.count?url=#{url}"
-                dataType: 'jsonp',
-                success: (json) => $(@).find('.social .hatena').show().text json ? 0
+            #  $.ajax
+            #    url: "http://api.b.st-hatena.com/entry.count?url=#{url}"
+            #    dataType: 'jsonp',
+            #    success: (json) => $(@).find('.social .hatena').show().text json ? 0
 
             $('.library .item').each (idx) ->
               repo = $(@).find('h4').text().replace(/^\s+/, '').replace(/\s+$/, '')
