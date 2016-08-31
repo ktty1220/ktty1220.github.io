@@ -143,21 +143,21 @@ html(lang='ja')
                       link: 'http://nicomment.ktty1220.me/',
                       desc: 'ニコニコ動画に投稿された動画のコメントの感情を分析し、コメントの傾向や動画の評判などを調べることができるWEBサービスです。',
                       favicon: 'http://nicomment.ktty1220.me/favicon.ico',
-                      height: 186
+                      height: 196
                     },
                     nicomment_crx: {
                       name: 'ニコニコメント感情分析室 Chrome出張所',
-                      link: 'http://nicomment.ktty1220.me/',
+                      link: 'javascript:void(0)',
                       desc: 'ニコニコ動画のコメントをリアルタイムに感情分析する拡張機能です(生放送コメントには対応していません)。',
                       favicon: 'https://www.google.com/images/icons/product/chrome_web_store-32.png',
-                      height: 186
+                      height: 178
                     },
                     nicomment_api: {
                       name: '一言コメント感情分析API',
                       link: 'http://nicomment.ktty1220.me/api.html',
                       desc: '口語体の一言コメントの感情を分析するAPIです。',
                       favicon: 'http://nicomment.ktty1220.me/favicon.api.ico',
-                      height: 186
+                      height: 160
                     },
                     nstl: {
                       name: 'ニコニコ検索タイムライン',
@@ -319,7 +319,9 @@ html(lang='ja')
 
     footer
       div.content
-        span Copyright &copy; 2013-2015
+        - var year = '2013-' + new Date().getFullYear();
+        span Copyright &copy;
+        != year
         a(href='./') ktty1220
         span All rights reserved.
 
