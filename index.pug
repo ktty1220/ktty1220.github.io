@@ -16,9 +16,9 @@ html(lang='ja')
       link(rel='stylesheet', href='css/' + css + '.css')
     - });
     != '\n    <!--[if lt IE 9]>'
-    script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+    script(src='https://html5shiv.googlecode.com/svn/trunk/html5.js')
     != '\n    <![endif]-->'
-    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
 
   body
     div#wrap
@@ -42,17 +42,32 @@ html(lang='ja')
               h2 Services
               -
                 var services = {
-                  Twitter: 'https://twitter.com/ktty1220',
-                  Qiita: 'http://qiita.com/ktty1220',
-                  GitHub: 'https://github.com/ktty1220',
-                  npm: 'https://npmjs.org/~ktty1220',
-                  GooglePlay: 'https://play.google.com/store/apps/developer?id=ktty1220'
+                  Twitter: {
+                    link: 'https://twitter.com/ktty1220',
+                    favicon: 'https://abs.twimg.com/favicons/favicon.ico'
+                  },
+                  Qiita: {
+                    link: 'http://qiita.com/ktty1220',
+                    favicon: 'https://cdn.qiita.com/assets/favicons/public/production-4ff10c1e1e2b5fcb353ff9cafdd56c70.ico'
+                  },
+                  GitHub: {
+                    link: 'https://github.com/ktty1220',
+                    favicon: 'https://assets-cdn.github.com/favicon.ico'
+                  },
+                  npm: {
+                    link: 'https://npmjs.org/~ktty1220',
+                    favicon: 'https://static.npmjs.com/3dc95981de4241b35cd55fe126ab6b2c.png'
+                  },
+                  GooglePlay: {
+                    link: 'https://play.google.com/store/apps/developer?id=ktty1220',
+                    favicon: 'https://ssl.gstatic.com/android/market_images/web/favicon.ico'
+                  }
                 };
               ul#services
-                each link, name in services
+                each info, name in services
                   li
-                    a(href=link, target='_blank')
-                      img.favicon(src=favicon(link), alt=name)
+                    a(href=info.link, target='_blank')
+                      img.favicon(src=info.favicon, alt=name)
                       span #{name}
 
               h2 Skill
@@ -195,6 +210,7 @@ html(lang='ja')
                       name: 'Articlip',
                       link: 'http://articlip.ktty1220.me/',
                       desc: 'ブログやニュースの記事部分だけを抽出して簡易ブラウザで軽快にサクサク閲覧することができるAndroid用RSSリーダーアプリです。',
+                      favicon: 'https://ssl.gstatic.com/android/market_images/web/favicon.ico',
                       height: 210
                     },
                     mini_socialbutton: {
@@ -313,10 +329,6 @@ html(lang='ja')
                           div!= info.desc
                         else
                           a(href=info.link, target='_blank')!= info.desc
-                    //div.social.clearfix
-                    //  span.hatena
-                    //  span.facebook
-                    //  span.twitter
 
       div#push
 
@@ -331,72 +343,11 @@ html(lang='ja')
     -
       var jsList = [
         'css_browser_selector',
-        'array_seq',
         'jquery.betterToggle',
-        'jquery.masonry'
+        'jquery.masonry',
+        'array_seq',
+        'index'
       ];
     - jsList.forEach(function (js) {
       script(src='js/' + js + '.js')
     - });
-
-    script
-      :coffee-script
-        $ ->
-          getBox = (elem) ->
-            return elem.parent() if elem.parent().hasClass 'item'
-            elem.parentsUntil('.item').parent().eq(0)
-
-          $('.item a').mouseenter () ->
-            getBox($(@)).addClass 'hover'
-          .mouseleave () ->
-            getBox($(@)).removeClass 'hover'
-
-          $('.products').masonry
-            itemSelector: '.item'
-          .masonry 'reload', () ->
-            n = $(@).length
-            [1..n].seq (item, idx, next) =>
-              $(@).eq(idx).betterToggle()
-              do () ->
-                setTimeout () ->
-                  next()
-                , 50
-            , (err) ->
-
-          unless /localhost/.test location.href
-            #$('.products .item').each (idx) ->
-            #  #url = $(@).find('a').attr('href')
-            #  url = $(@).data 'url'
-            #  counter = $(@).find('.social .facebook')
-            #  $.ajax
-            #    url: "https://graph.facebook.com/#{url}"
-            #    dataType: 'jsonp',
-            #    success: (json1) =>
-            #      if json1.shares?
-            #        counter.show().text json1.shares ? 0
-            #      else
-            #        likes = json1.likes ? 0
-            #        $.ajax
-            #          url: "https://graph.facebook.com/fql?q=#{encodeURIComponent "SELECT total_count FROM link_stat WHERE url='#{url}'"}"
-            #          dataType: 'jsonp',
-            #          success: (json2) =>
-            #            total = json2?.data[0]?.total_count ? 0
-            #            counter.show().text likes + total
-
-            #  $.ajax
-            #    url: "http://urls.api.twitter.com/1/urls/count.json?url=#{url}"
-            #    dataType: 'jsonp',
-            #    success: (json) => $(@).find('.social .twitter').show().text json.count ? 0
-
-            #  $.ajax
-            #    url: "http://api.b.st-hatena.com/entry.count?url=#{url}"
-            #    dataType: 'jsonp',
-            #    success: (json) => $(@).find('.social .hatena').show().text json ? 0
-
-            $('.library .item').each (idx) ->
-              repo = $(@).find('h4').text().replace(/^\s+/, '').replace(/\s+$/, '')
-              $.ajax
-                url: "https://api.github.com/repos/ktty1220/#{repo}"
-                dataType: 'jsonp',
-                success: (json) =>
-                  $(@).find('.hubinfo .star').show().text json.data.watchers ? 0

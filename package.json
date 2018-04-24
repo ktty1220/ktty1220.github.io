@@ -1,0 +1,24 @@
+{
+  "name": "ktty1220.github.io",
+  "main": "index.html",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build:html": "pug --pretty index.pug",
+    "build:js": "coffee -bct -o js/ js/*.coffee",
+    "build:css": "lessc css/style.less css/style.css",
+    "build": "run-p build:html build:js build:css"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "coffeescript": "^2.2.4",
+    "less": "^3.0.2",
+    "npm-run-all": "^4.1.2",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
