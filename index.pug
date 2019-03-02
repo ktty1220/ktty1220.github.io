@@ -52,7 +52,7 @@ html(lang='ja')
                   },
                   GitHub: {
                     link: 'https://github.com/ktty1220',
-                    favicon: 'https://assets-cdn.github.com/favicon.ico'
+                    favicon: 'https://github.githubassets.com/favicon.ico'
                   },
                   npm: {
                     link: 'https://npmjs.org/~ktty1220',
@@ -112,8 +112,10 @@ html(lang='ja')
                   var libs = {
                     'cheerio-httpcli': 'iconvによる文字コード変換とcheerioによるHTMLパースを組み込んだNode.js用HTTPクライアントモジュール',
                     'jquery.popn-socialbutton': 'Twitter, Facebook, はてなブックマークのカスタムシェアボタンを表示するjQueryプラグイン',
-                    'jquery.lively-layout': 'HTMLのレイアウト表示をアニメーションで演出するjQueryプラグイン',
+                    'nanox': 'React用の小規模なFluxライクフレームワーク',
+                    'hyperapp-infinite-list': 'Hyperapp用の無限スクロールリストコンポーネント',
                     'gulp-packages': 'gulp package management helper',
+                    'jquery.lively-layout': 'HTMLのレイアウト表示をアニメーションで演出するjQueryプラグイン',
                     'lwl': 'ファイル名 & 行番号付きのログを出力するNode.jsモジュール',
                     'cordova-filesystem': 'PhoneGapのファイルAPIを使いやすくするラッパー',
                     'bucome-watcher': 'はてなブックマーク コメント追っかけサービス「ブコメwatcher」のソース',
@@ -160,12 +162,11 @@ html(lang='ja')
                       favicon: 'http://nicomment.ktty1220.me/favicon.ico',
                       height: 196
                     },
-                    nicomment_crx: {
-                      name: 'ニコニコメント感情分析室 Chrome出張所',
-                      link: 'https://chrome.google.com/webstore/detail/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%84%9F%E6%83%85%E5%88%86%E6%9E%90%E5%AE%A4-chrome%E5%87%BA%E5%BC%B5%E6%89%80/jbohmnamjoamomkiaekmhnfhbopklcnf',
-                      desc: 'ニコニコ動画のコメントをリアルタイムに感情分析する拡張機能です(生放送コメントには対応していません)。',
-                      favicon: 'https://www.google.com/images/icons/product/chrome_web_store-32.png',
-                      height: 178
+                    tweet_profiling: {
+                      name: 'ツイートプロファイリング',
+                      link: 'http://tweet-profiling.ktty1220.me/',
+                      desc: '【Mashup Awards 9 応募作品】あなたの最近のツイートを分析・集計して、ツイート内容の傾向をグラフ化するWEBサービスです。',
+                      height: 177
                     },
                     nicomment_api: {
                       name: '一言コメント感情分析API',
@@ -181,12 +182,6 @@ html(lang='ja')
                       favicon: 'https://ssl.gstatic.com/android/market_images/web/favicon.ico',
                       height: 186
                     },
-                    tweet_profiling: {
-                      name: 'ツイートプロファイリング',
-                      link: 'http://tweet-profiling.ktty1220.me/',
-                      desc: '【Mashup Awards 9 応募作品】あなたの最近のツイートを分析・集計して、ツイート内容の傾向をグラフ化するWEBサービスです。',
-                      height: 177
-                    },
                     nicots: {
                       name: 'NicoTS',
                       link: 'https://chrome.google.com/webstore/detail/nicots-%E3%80%9C%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%8B%95%E7%94%BB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%83%95%E3%83%88%E4%BA%88%E7%B4%84%E7%AE%A1%E7%90%86%E3%80%9C/okamklpjdcphkdpdoidcllakkmfdkbml',
@@ -194,75 +189,43 @@ html(lang='ja')
                       favicon: 'https://www.google.com/images/icons/product/chrome_web_store-32.png',
                       height: 178
                     },
-                    to1jp: {
-                      name: 'To-1グランプリ',
-                      link: 'http://to-1.jp/',
-                      desc: 'Twitterの日本語ハッシュタグで寄せらせた人気のお題に対するツイートとユーザーのランキングをデイリーで集計しているサイトです。',
-                      height: 338
+                    nicomment_crx: {
+                      name: 'ニコニコメント感情分析室 Chrome出張所',
+                      link: 'https://chrome.google.com/webstore/detail/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%84%9F%E6%83%85%E5%88%86%E6%9E%90%E5%AE%A4-chrome%E5%87%BA%E5%BC%B5%E6%89%80/jbohmnamjoamomkiaekmhnfhbopklcnf',
+                      desc: 'ニコニコ動画のコメントをリアルタイムに感情分析する拡張機能です(<span class="end">HTML5未対応のため、現在公開を停止しています)。',
+                      favicon: 'https://www.google.com/images/icons/product/chrome_web_store-32.png',
+                      height: 178
                     },
-                    bucome_watcher: {
-                      name: 'ブコメwatcher',
-                      link: 'http://bucome-watcher.herokuapp.com/',
-                      desc: 'はてなブックマークの複数のエントリーのコメントを同時進行でウォッチできるサービスです。ソースはGitHubで公開しています(MITライセンス)。',
-                      height: 189
-                    },
-                    articlip: {
-                      name: 'Articlip',
-                      link: 'http://articlip.ktty1220.me/',
-                      desc: 'ブログやニュースの記事部分だけを抽出して簡易ブラウザで軽快にサクサク閲覧することができるAndroid用RSSリーダーアプリです。',
-                      favicon: 'https://ssl.gstatic.com/android/market_images/web/favicon.ico',
-                      height: 210
-                    },
-                    mini_socialbutton: {
-                      name: 'mini SocialButton',
-                      link: 'https://addons.mozilla.org/ja/firefox/addon/mini-socialbutton/',
-                      desc: 'ツールバーにソーシャルカウントを表示するボタンを設置します。ボタンを押すとコメント一覧ページを別タブで開きます。',
-                      height: 160
-                    },
-                    tweet: {
-                      name: '旬なツイート@ばっちりサーチ.net',
-                      link: 'http://tweet.batch-re-search.net/',
-                      desc: '気になる単語に関する最新のツイートをさまざまな角度から分析するツイート分析WEBサービスです。',
-                      height: 218
-                    },
-                    event: {
-                      name: '日本全国イベント情報@ばっちりサーチ.net',
-                      link: 'http://event.batch-re-search.net/',
-                      desc: '日本全国のイベント情報を細かな条件ですみずみまで検索できる情報サービスです。',
-                      height: 221
-                    },
-                    sweets: {
-                      name: 'お取り寄せスイーツ@ばっちりサーチ.net',
-                      link: 'http://sweets.batch-re-search.net/',
-                      desc: 'ご希望に合ったお取り寄せスイーツをすみずみまで検索できる情報サービスです。',
-                      height: 221
-                    },
-                    rrgrm: {
-                      name: '沿線グルメスポット@ばっちりサーチ.net',
-                      link: 'http://rrgrm.batch-re-search.net/',
-                      desc: '指定した駅区間のグルメスポットをすみずみまで検索できる情報検索サービスです。',
-                      height: 236
-                    },
+                    //event: {
+                    //  name: '日本全国イベント情報@ばっちりサーチ.net',
+                    //  link: 'http://event.batch-re-search.net/',
+                    //  desc: '日本全国のイベント情報を細かな条件ですみずみまで検索できる情報サービスです。',
+                    //  height: 221
+                    //},
+                    //tweet: {
+                    //  name: '旬なツイート@ばっちりサーチ.net',
+                    //  link: 'http://tweet.batch-re-search.net/',
+                    //  desc: '気になる単語に関する最新のツイートをさまざまな角度から分析するツイート分析WEBサービスです。',
+                    //  height: 218
+                    //},
+                    //sweets: {
+                    //  name: 'お取り寄せスイーツ@ばっちりサーチ.net',
+                    //  link: 'http://sweets.batch-re-search.net/',
+                    //  desc: 'ご希望に合ったお取り寄せスイーツをすみずみまで検索できる情報サービスです。',
+                    //  height: 221
+                    //},
+                    //rrgrm: {
+                    //  name: '沿線グルメスポット@ばっちりサーチ.net',
+                    //  link: 'http://rrgrm.batch-re-search.net/',
+                    //  desc: '指定した駅区間のグルメスポットをすみずみまで検索できる情報検索サービスです。',
+                    //  height: 236
+                    //},
                     analyze_beauty: {
                       end: true,
                       name: '美女徹底分析',
                       link: 'http://analyze-beauty.ktty1220.me/',
                       desc: '【<span class="apeal">Mashup Awards 9  株式会社ドワンゴ賞 受賞作品</span>】ランダムに表示された美女画像から好みの美女に関する関連情報を見ることができるWEBサービスです。(<span class="end">2016-12-30にサービスを終了しました</span>)',
                       height: 244
-                    },
-                    kaiten_nico: {
-                      end: true,
-                      name: '回転ニコ',
-                      link: 'http://kaiten-nico.ktty1220.me/',
-                      desc: '【HTML5 Japan Cup 2014 応募作品】指定した単語でniconicoサービス全体を検索して、該当するコンテンツを仕入れて回転寿司のようにレーンに流していくWEBサービスです。(<span class="end">2016-12-30にサービスを終了しました</span>)',
-                      height: 197
-                    },
-                    nicomment_old: {
-                      end: true,
-                      name: 'ニコニコ動画コメント@ばっちりサーチ.net',
-                      link: 'http://nicomment.batch-re-search.net/',
-                      desc: 'ニコニコ動画に投稿された動画のコメントを分析し、コメントの傾向や動画の評判などを細かく簡単に調べることができるWEBサービスです。(<span class="end">2016-09-01に「ニコニコメント感情分析室」へリニューアルしました</span>)',
-                      height: 252
                     },
                     todays_moods: {
                       end: true,
@@ -285,6 +248,27 @@ html(lang='ja')
                       desc: 'Twitterでつぶやかれたツイートをまとめて、ノベルゲームのような動きのある動画形式で再生できる「リプレイ」を作成し、投稿・閲覧できるWEBサービスです(<span class="end">2014-08-31にサービスを終了しました</span>)。',
                       height: 169
                     },
+                    kaiten_nico: {
+                      end: true,
+                      name: '回転ニコ',
+                      link: 'http://kaiten-nico.ktty1220.me/',
+                      desc: '【HTML5 Japan Cup 2014 応募作品】指定した単語でniconicoサービス全体を検索して、該当するコンテンツを仕入れて回転寿司のようにレーンに流していくWEBサービスです。(<span class="end">2016-12-30にサービスを終了しました</span>)',
+                      height: 197
+                    },
+                    //nicomment_old: {
+                    //  end: true,
+                    //  name: 'ニコニコ動画コメント@ばっちりサーチ.net',
+                    //  link: 'http://nicomment.batch-re-search.net/',
+                    //  desc: 'ニコニコ動画に投稿された動画のコメントを分析し、コメントの傾向や動画の評判などを細かく簡単に調べることができるWEBサービスです。(<span class="end">2016-09-01に「ニコニコメント感情分析室」へリニューアルしました</span>)',
+                    //  height: 252
+                    //},
+                    //hotword: {
+                    //  end: true,
+                    //  name: '話題のワード@ばっちりサーチ.net',
+                    //  link: 'http://hotword.batch-re-search.net/',
+                    //  desc: '今、ネット上で話題になっているワードと、そのワードに関するニュースやブログ・動画などの情報をデイリーでまとめているWEB情報サービスです。(<span class="end">2016-12-30にサービスを終了しました</span>)',
+                    //  height: 189
+                    //},
                     dqnqa: {
                       end: true,
                       name: 'トンデモ面接風Q&A',
@@ -292,13 +276,36 @@ html(lang='ja')
                       desc: '日頃思っている素朴な疑問を面接官と学生に扮して自由にやり取りできる登録不要のQ&amp;Aサイトです(<span class="end">2015-03-28にサービスを終了しました</span>)。',
                       height: 213
                     },
-                    hotword: {
+                    to1jp: {
                       end: true,
-                      name: '話題のワード@ばっちりサーチ.net',
-                      link: 'http://hotword.batch-re-search.net/',
-                      desc: '今、ネット上で話題になっているワードと、そのワードに関するニュースやブログ・動画などの情報をデイリーでまとめているWEB情報サービスです。(<span class="end">2016-12-30にサービスを終了しました</span>)',
+                      name: 'To-1グランプリ',
+                      link: 'http://to-1.jp/',
+                      desc: 'Twitterの日本語ハッシュタグで寄せらせた人気のお題に対するツイートとユーザーのランキングをデイリーで集計しているサイトです。(<span class="end">2019-02-28にサービスを終了しました</span>)',
+                      height: 338
+                    },
+                    bucome_watcher: {
+                      end: true,
+                      name: 'ブコメwatcher',
+                      link: 'http://bucome-watcher.herokuapp.com/',
+                      desc: 'はてなブックマークの複数のエントリーのコメントを同時進行でウォッチできるサービスです。ソースはGitHubで公開しています。(<span class="end">2019-02-28にサービスを終了しました</span>)',
                       height: 189
-                    }
+                    },
+                    articlip: {
+                      end: true,
+                      name: 'Articlip',
+                      link: 'http://articlip.ktty1220.me/',
+                      desc: 'ブログやニュースの記事部分だけを抽出して簡易ブラウザで軽快にサクサク閲覧することができるAndroid用RSSリーダーアプリです。(<span class="end">2018-10-01に公開を終了しました</span>)',
+                      favicon: 'https://ssl.gstatic.com/android/market_images/web/favicon.ico',
+                      height: 210
+                    },
+                    mini_socialbutton: {
+                      end: true,
+                      name: 'mini SocialButton',
+                      link: 'https://addons.mozilla.org/ja/firefox/addon/mini-socialbutton/',
+                      desc: 'ツールバーにソーシャルカウントを表示するボタンを設置します。ボタンを押すとコメント一覧ページを別タブで開きます。(<span class="end">2018-10-01に公開を終了しました</span>)',
+                      favicon: 'https://addons.cdn.mozilla.net/favicon.ico?v=2',
+                      height: 160
+                    },
                   };
                 each info, ss in products
                   - var c = [ 'item' ];
