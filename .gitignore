@@ -1,4 +1,6 @@
 node_modules
 shipitfile.js
 CNAME
-.bak
+index.pug
+.vercel
+.vercelignore
