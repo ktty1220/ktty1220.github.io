@@ -1,0 +1,29 @@
+body {
+  margin: auto;
+  background-color: #212529;
+}
+
+main {
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+.avatar img {
+  width: 80px;
+  height: 80px;
+}
+
+.member-card {
+  display: flex;
+  padding: 1rem 1.5rem;
+  max-width: 470px;
+}
+
+.member-card > .profile {
+  margin-left: 1.5rem;
+}
+
+.member-card > .profile > .name {
+  font-size: 20px;
+}
